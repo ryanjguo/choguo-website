@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>choguo portfolio</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  </head>
+  <body onload='setTimeout(typeWriter, 500)' onscroll="closeNav()">
+    <script src="script.js"></script>
+
+
+    <a id="top"></a>
+    <div class="landing">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#about">about</a>
+        <a href="#hobbies">hobbies</a>
+        <a href="#contact">contact</a>
+      </div>
+      <span id='menubutt' onclick="openNav()">&#9776;</span>
+      <div class="title-box">
+        <h1  id='bruh' class="title"></h1>
+        <div onload="fadeIn()" class="explore">
+          <a href="#about" id="explore-button">Explore</a>
+      </div>
+      </div>
+      
+    </div>
+
+    <h2 id="about">About Us</h2>
+    <div class="grid-container about-us">
+      <img src='eugene.webp' alt="eugene's photo" class="headshot">
+      <img src='ryan.jpg' alt="ryan's photo" class="headshot">
+      <h2 class="names">eugene cho</h2>
+      <h2 class="names">ryan guo</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus corporis eaque voluptas corrupti tempora quisquam doloremque, laborum quo soluta, natus cupiditate ipsum sapiente tempore ut officia! Ab incidunt quo vero. </p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam porro accusamus itaque et harum cumque, sapiente doloribus. Deleniti quidem ipsam corporis neque veritatis unde obcaecati? Assumenda voluptas asperiores ipsam necessitatibus?</p>
+    </div>
+
+    <h2 id="hobbies">Projects</h2>
+
+    <h2 id="contact">Contact Us</h2>
+
+
+
+    <script>document.getElementById('contact').addEventListener("click", myFunction)</script>
+  </body>
+</html>
