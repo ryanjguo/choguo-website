@@ -10,14 +10,24 @@ html {
   margin: 0;
 }
 
+::selection {
+  background-color: goldenrod;
+  color: black;
+}
+
 a {
   text-decoration: none;
   background-color: transparent;
 }
 
+footer {
+  text-align: center;
+  border-top: goldenrod 2px solid;
+}
+
 .landing {
   height: 100vh;
-  background-image: url('css-backgrounds.jpg');
+  background-image: url('/imgs/css-backgrounds.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   align-content: center;
@@ -25,12 +35,12 @@ a {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
   margin: 1rem;
-  column-gap: 3rem;
-  height: 90vh;
-  justify-items: center;
   padding: 0vh 3vw;
+  column-gap: 5vw;
+  height: auto;
+  justify-items: center;
 }
 
 .sidenav {
@@ -89,12 +99,148 @@ a {
 
 .headshot {
   border: 3px silver solid;
-  border-radius: 50%;
+  grid-column: 1 / 4;
+  object-fit: cover;
+  width: 100%;
 }
 
 .names {
-  font-style: italic;
   font-size: 3em;
+  grid-column: 1 / -1;
+  background-color: transparent;
+}
+
+.card {
+  border: 2px white solid;
+  border-radius: 3%;
+  /*box-shadow: 2px 2px 6px 0px rgba(255, 255, 255, 0.3);*/
+  padding: 1rem;
+  background: linear-gradient(-172deg, #e0e2e4 0%, #283c50 60%, transparent 27%);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr)
+}
+
+.card p {
+  grid-column: 1 / -1;
+}
+
+.icons {
+  background-color: transparent;
+  height: fit-content;
+  align-self: center;
+  justify-self: end;
+  padding: 0;
+  margin: 0;
+  grid-column: 4;
+
+}
+
+.icons li{
+  list-style: none;
+  background-color: transparent;
+  width: fit-content;
+  padding: 5px 0px;
+}
+
+.icons li a {
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 80px;
+  font-size: 35px;
+  margin: 0 10px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #fff;
+  z-index: 1;
+}
+
+.icons li a .social {
+  position: relative;
+  color: #242424;
+  background-color: transparent;
+  transition: .5s;
+  z-index: 3;
+}
+
+.icons li a:hover .social {
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+.icons li a:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: .5s;
+  z-index: 2;
+}
+
+.icons li a:hover:before {
+  top: 0;
+}
+
+.icons li:nth-child(1) a:before{
+  background: #FEDA77;
+}
+
+.icons li:nth-child(2) a:before{
+  background: #55acee;
+}
+
+.icons li:nth-child(3) a:before {
+  background: #242424;
+}
+
+.icons li:nth-child(4) a:before {
+  background: #dd4b39;
+}
+
+.contact-form {
+  width: 60%;
+  margin: auto;
+}
+
+.contact-form-input {
+  display: block;
+  justify-self: center;
+  width: 100%;
+  text-align: center;
+  margin: 1rem 0rem;
+  padding: 0.5rem 0rem;
+  background: #111111;
+  transition: 0.2s;
+  border: none;
+  outline: 2px white solid;
+}
+
+.contact-form-input:hover {
+  box-shadow: 0 0 0.6rem 0.3rem goldenrod;
+}
+
+textarea {
+  resize: none;
+}
+
+.contact-form-button {
+  width: 100%;
+  border-radius: 1em;
+  background-color: #363636;
+  margin: 0em 0em 1em;
+  transition: 0.3s;
+  border: none;
+  outline: 2px white solid;
+}
+
+.contact-form-button:hover {
+  background-color: goldenrod;
 }
 
 @media screen and (max-height: 450px) {
@@ -103,7 +249,7 @@ a {
 }
 
 #menubutt {
-  font-size: 70px;
+  font-size: 4rem;
   cursor: pointer;
   background-color: transparent;
   padding-left: 2%;
@@ -133,8 +279,10 @@ a {
 
 #hobbies {
   text-align: center;
+  font-size: 3rem;
 }
 
 #contact {
   text-align: center;
+  font-size: 3rem;
 }
