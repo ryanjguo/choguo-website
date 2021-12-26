@@ -1,18 +1,5 @@
 
 
-function myFunction() {
-  
-  let email = prompt('Enter ur email bruh', '');
- 
-
-  if (email == null || email == "") {
-    console.log('User cancelled');
-
-  } else {
-    console.log(email);
-  }
-
-}
 
 var i = 0;
 var speed = 100;
@@ -21,7 +8,7 @@ var txt = 'choguo';
 function typeWriter() {
 
   if (i < txt.length) {
-    document.getElementById("bruh").innerHTML += txt.charAt(i);
+    document.getElementById("main-title").innerHTML += txt.charAt(i);
     i++;
     setTimeout(typeWriter, speed);
   }
